@@ -1,0 +1,15 @@
+class Solution:
+    def searchRange(self, nums: List[int], target: int) -> List[int]:
+      
+        a=[]
+        b=[]
+        j=len(nums)
+        for i in range(0,j):
+            if nums[i]==target:
+                a.append(i)
+        if len(a)==0:
+            return [-1,-1]
+        else:
+            b.append(min(a))
+            b.append(max(a))
+            return b
